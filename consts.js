@@ -108,17 +108,3 @@ export function isValidMove(matrix, cellRow, cellCol) {
 
   return true;
 }
-
-export function showScore() {
-  const infoDataSelectors = info.querySelectorAll("h3");
-  const data = [
-    "Уровень: " + level,
-    "Очки:   " + score,
-    "До конца уровня: " + (difficulty - rowsCounter),
-    "Чемпион: " + recordOwner,
-    "Рекорд:  " + record,
-  ];
-  Array.from(infoDataSelectors).forEach((it, ind) => {
-    it.textContent = data[ind];
-  });
-}

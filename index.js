@@ -25,6 +25,20 @@ if (CON.storageLen > 0) {
   recordOwner = localStorage.recordOwner;
 }
 
+function showScore() {
+  const infoDataSelectors = info.querySelectorAll("h3");
+  const data = [
+    "Уровень: " + level,
+    "Очки:   " + score,
+    "До конца уровня: " + (difficulty - rowsCounter),
+    "Чемпион: " + recordOwner,
+    "Рекорд:  " + record,
+  ];
+  Array.from(infoDataSelectors).forEach((it, ind) => {
+    it.textContent = data[ind];
+  });
+}
+
 CON.setPrestartMarkup();
 
 function getNextFigure() {
@@ -213,7 +227,7 @@ function startGame() {
 function loop() {
   frame = requestAnimationFrame(loop);
   CON.context.clearRect(0, 0, CON.canvas.width, CON.canvas.height);
-  CON.showScore();
+  showScore();
   startGame();
 }
 
