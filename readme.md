@@ -3,4 +3,4 @@
  - canvas (используется впервые после проектов связанных с корректировкой фото)
  - requestAnimationFrame (используется впервые)
  
- Деплой (тут)[https://loki87by.github.io/tetris/]
+ Деплой [тут](https://loki87by.github.io/tetris/)
