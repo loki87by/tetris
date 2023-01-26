@@ -20,7 +20,7 @@ let isPaused = false;
 
 const player = prompt("Ваше имя", "") || "Безымянный игрок";
 
-if (CON.storageLen > 0) {
+if (localStorage.length > 0) {
   record = localStorage.record;
   recordOwner = localStorage.recordOwner;
 }
